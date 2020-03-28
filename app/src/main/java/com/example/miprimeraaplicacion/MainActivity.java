@@ -46,5 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 textoPrincipal.setTextColor(Color.GREEN);
             }
         });
+
+        botonCambiarTexto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textoPrincipal.setText("Esto cambio?");
+            }
+        });
     }
 }
