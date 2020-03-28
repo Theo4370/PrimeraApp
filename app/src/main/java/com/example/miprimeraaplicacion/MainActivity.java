@@ -18,12 +18,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        nombre = findViewById(R.id.mainActivity_editorNombre);
         botonEnviar = findViewById(R.id.mainActivity_botonEnviar);
-        //nombre.findViewById(R.id.mainActivity_editorNombre);
         botonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Hola wachim", Toast.LENGTH_SHORT).show();
+                String elNombreString = nombre.getText().toString();
+                //Toast.makeText(MainActivity.this, "Hola wachem", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Hola " + elNombreString + ", como andas?", Toast.LENGTH_SHORT).show();
             }
         });
     }
